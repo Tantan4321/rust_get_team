@@ -18,8 +18,8 @@ fn scrape_team_data(url: &str) {
 
     for record in doc_body.select(&record) {
         let records = record.text().collect::<Vec<_>>();
-        println!("The Minnesota Vikings were {} with a record of {}", records[0].trim(), records[1].trim());
+        let div: Vec<&str> = records[0].split_whitespace().collect();
+        let division = format!("{} {}", div[1], div[2]);
+        println!("The Minnesota Vikings were {} in {} with a record of {}", div[0], division, records[1].trim());
     }
-
-
 }
