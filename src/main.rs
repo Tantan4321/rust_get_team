@@ -20,6 +20,6 @@ fn scrape_team_data(url: &str) {
         let records = record.text().collect::<Vec<_>>();
         let div: Vec<&str> = records[0].split_whitespace().collect();
         let division = format!("{} {}", div[1], div[2]);
-        println!("The Minnesota Vikings were {} in {} with a record of {}", div[0], division, records[1].trim());
+        println!("The Minnesota Vikings were {} in the {} division with a record of {}", div[0], division, records[1].trim());
     }
 }
