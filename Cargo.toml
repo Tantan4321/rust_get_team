@@ -1,0 +1,11 @@
+[package]
+name = "rust_get_team"
+version = "0.1.0"
+authors = ["Eastan Giebler <kupa528@yahoo.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+reqwest = "0.9.22"
+scraper = "0.11.0"
